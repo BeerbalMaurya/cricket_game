@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket_game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="main_container">
+    <h1>Cricket Bat Ball Cricket Game</h1>
+    <div class="btn_container">
+     <button id="bat" onclick="
+    let computerChoice = computerRandomChoice();
+
+    let resultMsg = getResult('bat', computerChoice);
+
+    showResult('bat', computerChoice, resultMsg);
+    
+    "><img src="image/bat.png" alt="Bat image"></button> 
+
+
+
+    <button onclick="
+     computerChoice = computerRandomChoice();
+
+     resultMsg = getResult('ball', computerChoice);
+
+    showResult('ball', computerChoice, resultMsg);
+     
+  
+    "><img src="image/ball.png" alt="Ball image"></button>
+
+
+   <button id="bat" onclick="
+    
+     computerChoice = computerRandomChoice();
+
+     resultMsg = getResult('stump', computerChoice);
+
+    showResult('stump', computerChoice, resultMsg);
+
+    "><img src="image/stump.png" alt="Stump image"></button>
+</div>
+    
+
+
+  <h3 class="userMoves"></h3>
+  <h3 class="computerMoves"></h3>
+  <h3 class="results"></h3>
+  <p class="scores"></p>
+
+  
+  <button onclick="resetScore(), localStorage.clear();" class="reset">Reset</button>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
